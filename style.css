@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F1E7E0;
+}
+
+/* NAVBAR */
+
+nav {
+    width: 100vw;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    padding: 0 3vw;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Distributes space between the elements */
+    z-index: 3; /* Ensure it stays above other elements */
+}
+
+#logo {
+    height: 25px;
+}
+
+nav h1 {
+    margin: 0; /* Removes default margin around h1 */
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+#manubar{
+    height: 23px;
+}
+header ul{
+    width: 94vw;
+    height: 2px;
+    background-color: #152945;
+    left: 3vw;
+    position: relative;
+    top: 0;
+}
+
