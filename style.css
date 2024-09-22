@@ -1,7 +1,11 @@
 @font-face {
     font-family: Black_emerald;
     src: url(fonts/Black_Emerald.ttf);
-  }
+}
+@font-face {
+    font-family: RawglyRegular;
+    src: url(fonts/RawglyRegular-MVyWP.otf);
+}
 
 *{
     padding: 0;
@@ -48,4 +52,56 @@ header ul{
     left: 3vw;
     position: relative;
     top: 0;
+}
+
+/* MAIN SECTION */
+
+.topsec div{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.topsec div p {
+    color: #152945;
+    font-family: RawglyRegular;
+    font-size: 7.5rem;
+    line-height: 96%;
+    font-weight: 400;
+    text-align: center;
+}
+
+.radiusimg {
+    position: absolute;
+    top: 28%; 
+    left: 52%;
+    transform: translate(-50%, -50%);
+    width: 10rem; /* This will make the image responsive */
+    height: auto;
+    z-index: 10; 
+}
+ 
+/* Responsive styles */
+@media (max-width: 768px) {
+    .topsec div p {
+        font-size: 5rem; 
+    }
+
+    .radiusimg {
+        width: 7rem;
+        top: 38.5%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .topsec div p {
+        font-size: 3.5rem; 
+    }
+
+    .radiusimg {
+        width: 40vw; 
+    }
 }
