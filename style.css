@@ -8,23 +8,30 @@
 }
 
 *{
-    padding: 0;
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
 }
 
 body{
     background-color: #F1E7E0;
 }
 
+header{
+    padding: 0 3vw;
+}
+
+main{
+    padding: 0 3vw;
+}
+
 /* NAVBAR */
 
 nav {
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     position: sticky;
     top: 0;
-    padding: 0 3vw;
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: space-between; /* Distributes space between the elements */
@@ -46,62 +53,496 @@ nav h1 {
     height: 23px;
 }
 header ul{
-    width: 94vw;
+    width: 100%;
     height: 2px;
     background-color: #152945;
-    left: 3vw;
     position: relative;
     top: 0;
+    box-sizing: border-box;
 }
 
-/* MAIN SECTION */
-
-.topsec div{
-    width: 100vw;
+.topsec {
+    width: 100%;
     height: 70vh;
+    position: relative; /* Ensures the div stays within the bounds of the section */
+}
+
+.topsec div {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    position: relative;
+    top: 100px;
 }
 
-.topsec div p {
-    color: #152945;
-    font-family: RawglyRegular;
-    font-size: 7.5rem;
-    line-height: 96%;
-    font-weight: 400;
-    text-align: center;
-}
-
-.radiusimg {
-    position: absolute;
-    top: 28%; 
-    left: 52%;
-    transform: translate(-50%, -50%);
-    width: 10rem; /* This will make the image responsive */
+.topsec div img {
+    width: 90%;
     height: auto;
-    z-index: 10; 
+    position: relative;
+    top: 0; 
+    transform: translate(0, -3vh); /* Adjusts the image position slightly upward */
 }
  
-/* Responsive styles */
 @media (max-width: 768px) {
-    .topsec div p {
-        font-size: 5rem; 
+    .topsec div {
+        top: 70px;
     }
-
-    .radiusimg {
-        width: 7rem;
-        top: 38.5%; 
+    .topsec{
+        height: 50vh;
     }
 }
 
 @media (max-width: 480px) {
-    .topsec div p {
-        font-size: 3.5rem; 
+    .topsec div {
+        top: 50px;
     }
 
-    .radiusimg {
-        width: 40vw; 
+    .topsec{
+        height: 40vh;
+    }
+}
+
+.scndsec{
+    padding: 200px 0 100px 0;
+}
+
+#midgrid{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.grid_left{
+    position: relative;
+    top: 30px;
+    margin-bottom: 20px;
+    width: 20%;
+}
+
+.grid_right{
+    position: relative;
+    top: 200px;
+    margin-bottom: 20px;
+    width: 20%;
+}
+.grid_mid{
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+.shopnowbutt{
+    border: #152945 3px solid;
+    display:flex;
+    width: 170px;
+    height: 60px;
+    text-align: center;
+    left: 4%;
+    bottom: 100px;
+    position: relative;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.shopnowbutt a{
+    text-decoration: none;
+    position: relative;
+    line-height: 58px;
+    color: #580E20;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.shopnowbutt img{
+    position: relative;
+    /* width: 25px; */
+    height: 20px;
+    margin: 5px ;
+}
+
+.shopnowbutt:hover {
+    background-color: #580E20;
+    color: #F1E7E0;
+}
+
+
+.videosec video{
+    width: 100%;
+    padding-bottom: 3vw;
+}
+
+
+/* Main section */
+.scrolling-text-section {
+    position: relative;
+    overflow: hidden;
+    height: 60px; /* Adjust based on your design */
+    background-color: #f5e9e1; /* Background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: #152945 3px solid;
+    border-bottom: #152945 3px solid;
+    margin-bottom: 3vw;
+}
+
+/* Scrolling container */
+.scrolling-text-container {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%; /* Ensure it spans the full width of the container */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Scrolling text */
+.scrolling-text {
+    display: flex; /* Change to flexbox */
+    align-items: center; /* Center vertically */
+    white-space: nowrap; /* Ensure the text stays in one line */
+    animation: scroll 20s linear infinite; /* Adjust the timing here if necessary */
+    padding-left: 100%;
+}
+
+.scroll_2end_text{
+    margin-left:80% ;
+}
+
+/* Scrolling text styling */
+.scrolling-text span {
+    font-size: 24px; /* Adjust size */
+    font-weight: bold;
+    color: #5d2837; /* Match with your design */
+    font-family: Black_emerald, Arial, Helvetica, sans-serif;
+    white-space: nowrap; /* Prevent text from wrapping */
+    line-height: 60px;
+}
+
+/* Image inside scrolling text */
+.scrolling-img {
+    height: 40px; /* Adjust height based on your design */
+    margin: 0 10px; /* Add margin for spacing */
+    vertical-align: middle; /* Ensures the image aligns with the text */
+}
+
+/* Scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End off-screen to the left */
+    }
+}
+
+/* New Earrings flex section */
+
+.new_earring_Sec{
+    text-align: center;
+    margin-bottom: 16vw;
+}
+
+.new_earring_head{
+    font-size: 5rem;
+    font-weight: 100;
+    color: #152945;
+    margin: 7vw;
+    font-family: RawglyRegular, Arial, Helvetica, sans-serif;
+}
+
+.earring_flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.earring_1, .earring_2, .earring_3, .earring_4{
+    width: 22%;
+}
+
+.earring_1{
+    position: relative;
+    top: 100px;
+
+}
+
+.earring_2{
+    position: relative;
+    top: 40px;
+}
+
+.earring_3{
+    position: relative;
+    top: 200px;
+
+}
+
+.shopnowbutt2{
+    border: #152945 3px solid;
+    display:flex;
+    width: 170px;
+    height: 60px;
+    text-align: center;
+    left: 94.5%;
+    transform: translate(-94.5%, 0);
+    top: 70px;
+    position: relative;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.shopnowbutt2 a{
+    text-decoration: none;
+    position: relative;
+    line-height: 58px;
+    color: #580E20;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.shopnowbutt2 img{
+    position: relative;
+    /* width: 25px; */
+    height: 20px;
+    margin: 5px ;
+}
+
+.shopnowbutt2:hover {
+    background-color: #580E20;
+    color: #F1E7E0;
+}
+
+.other_jewelries_Sec{
+    text-align: center;
+    margin-bottom: 16vw;
+}
+
+/* Footer */
+
+footer {
+    background-color: #580E20;
+    color: #F1E7E0;
+    padding: 2rem 3vw;
+    font-family: Arial, sans-serif;
+    margin-top: 18vw;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 0;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+    margin-top: 1rem;
+    
+}
+
+.brand-name {
+    font-size: 3rem;
+    font-family: 'Black_emerald', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info img {
+    width: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons li a img {
+    width: 24px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.footer-links li a {
+    color: #F1E7E0;
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    border-top: 1px solid #F1E7E0;
+    padding-top: 1rem;
+}
+
+
+/* Tab View */
+
+@media (max-width: 1270px) {
+    .scndsec {
+        padding: 100px 0 0 0; /* Adjust padding for tablet */
+    }
+
+    #midgrid {
+        flex-wrap: wrap;
+        justify-content: space-between; /* Space them evenly in tablet view */
+
+    }
+
+    .grid_left, .grid_mid, .grid_right {
+        width: 45%; /* Adjust the width for two columns in tablet view */
+        top: 0; /* Ensure equal space above each image */
+    }
+
+    .grid_mid_2 {
+        display: block; /* Add new image to the middle */
+        width: 45%; /* Same width as the others */
+        position: relative;
+        top: 0;
+        margin-top: 20px;
+    }
+
+    .grid_right{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0;
+    }
+
+    .earring_1{
+        position: relative;
+        top: 80px;
+    
+    }
+    
+    .earring_2{
+        position: relative;
+        top: 35px;
+    }
+    
+    .earring_3{
+        position: relative;
+        top: 123px;
+    
+    }
+
+    .shopnowbutt2{
+        left: 50%;
+        top: 70px;
+        transform: translate(-50%, 0);
+        width: 190px;
+        margin: 10vw 0;
+    }
+
+}
+
+/* Mobile View */
+
+@media (max-width: 768px) {
+    .scndsec {
+        padding: 100px 0 12px 0; /* Adjust padding for mobile */
+    }
+
+    #midgrid {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+    }
+
+    .grid_left, .grid_mid, .grid_right {
+        width: 90%; /* Make images take most of the screen width */
+        top: 0; /* Ensure the space above each image is uniform */
+    }
+
+    .shopnowbutt{
+        width: 190px;
+        left: 50%;
+        bottom: 5px;
+        transform: translate(-50%, 0);
+        margin: 10vw 0;
+    }
+
+    .grid_right{
+        position: relative;
+        left: 0;
+        transform: translate(0, 0);
+    }
+
+    .new_earring_head{
+        font-size: 3rem;
+    }
+
+    .earring_1{
+        position: relative;
+        top: 36px;
+    
+    }
+    
+    .earring_2{
+        position: relative;
+        top: 16px;
+    }
+    
+    .earring_3{
+        position: relative;
+        top: 53px;
+    
+    }
+
+    .shopnowbutt2{
+        left: 50%;
+        top: 70px;
+        transform: translate(-50%, 0);
+        width: 190px;
+        margin-bottom: 40vw;
+    }
+
+    .new_earring_Sec{
+        margin-bottom: 24vw;
+    }
+    
+    .brand-name {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+    }
+    .footer-right{
+        margin-top: 1.7rem;
     }
 }
