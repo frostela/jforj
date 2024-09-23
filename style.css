@@ -241,12 +241,13 @@ header ul{
 
 /* New Earrings flex section */
 
-.new_earring_Sec{
+/* General styling */
+.new_earring_Sec, .other_jewelries_Sec {
     text-align: center;
     margin-bottom: 16vw;
 }
 
-.new_earring_head{
+.new_earring_head {
     font-size: 5rem;
     font-weight: 100;
     color: #152945;
@@ -254,35 +255,42 @@ header ul{
     font-family: RawglyRegular, Arial, Helvetica, sans-serif;
 }
 
-.earring_flex{
+.new_earring_head2 {
+    font-size: 5rem;
+    font-weight: 100;
+    color: #152945;
+    margin: 7vw;
+    font-family: RawglyRegular, Arial, Helvetica, sans-serif;
+}
+
+.earring_flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.earring_1, .earring_2, .earring_3, .earring_4{
+
+.earring_1, .earring_2, .earring_3, .earring_4 {
     width: 22%;
 }
 
-.earring_1{
+.earring_1 {
     position: relative;
     top: 100px;
-
 }
 
-.earring_2{
+.earring_2 {
     position: relative;
     top: 40px;
 }
 
-.earring_3{
+.earring_3 {
     position: relative;
     top: 200px;
-
 }
 
-.shopnowbutt2{
+.shopnowbutt2 {
     border: #152945 3px solid;
-    display:flex;
+    display: flex;
     width: 170px;
     height: 60px;
     text-align: center;
@@ -293,10 +301,9 @@ header ul{
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    
 }
 
-.shopnowbutt2 a{
+.shopnowbutt2 a {
     text-decoration: none;
     position: relative;
     line-height: 58px;
@@ -305,11 +312,10 @@ header ul{
     font-size: 20px;
 }
 
-.shopnowbutt2 img{
+.shopnowbutt2 img {
     position: relative;
-    /* width: 25px; */
     height: 20px;
-    margin: 5px ;
+    margin: 5px;
 }
 
 .shopnowbutt2:hover {
@@ -317,10 +323,7 @@ header ul{
     color: #F1E7E0;
 }
 
-.other_jewelries_Sec{
-    text-align: center;
-    margin-bottom: 16vw;
-}
+
 
 /* Footer */
 
@@ -507,6 +510,7 @@ footer {
 
     .new_earring_head{
         font-size: 3rem;
+        margin-top: 10vw;
     }
 
     .earring_1{
@@ -522,8 +526,13 @@ footer {
     
     .earring_3{
         position: relative;
-        top: 53px;
+        top: 36px;
     
+    }
+
+    .earring_4{
+        position: relative;
+        top: 16px;
     }
 
     .shopnowbutt2{
@@ -544,5 +553,25 @@ footer {
     }
     .footer-right{
         margin-top: 1.7rem;
+    }
+
+    .earring_flex {
+        justify-content: center;
+    }
+
+    .earring_1, .earring_2, .earring_3, .earring_4 {
+        width: 40%; /* Two columns on mobile */
+        margin: 20px auto;
+    }
+
+    .shopnowbutt2 {
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 30px;
+    }
+
+    .new_earring_head2 {
+        margin-top: -20vw;
+        font-size: 3rem;
     }
 }
