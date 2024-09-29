@@ -37,6 +37,7 @@ nav {
     justify-content: space-between; /* Distributes space between the elements */
     z-index: 3; /* Ensure it stays above other elements */
     font-family:Black_emerald, Arial, Helvetica, sans-serif;
+    z-index: 3;
 }
 
 #logo {
@@ -51,6 +52,7 @@ nav h1 {
 
 #manubar{
     height: 23px;
+    cursor: pointer;
 }
 header ul{
     width: 100%;
@@ -60,6 +62,73 @@ header ul{
     top: 0;
     box-sizing: border-box;
 }
+
+/* Burger Menu Styles */
+#menu {
+    width: 100%;
+    height: 0;
+    background-color: #580E20;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#menu a {
+    color: white;
+    font-size: 1.9rem;
+    text-decoration: none;
+    display: flex; /* Change to flexbox to align image and text */
+    align-items: center; /* Vertically center the image and text */
+    padding: 7px;
+    margin: 0 10px;
+}
+
+#menu a img {
+    margin-right: 1.8vw;
+    width: 1.7rem;
+    vertical-align: middle; /* Ensures image remains vertically aligned */
+}
+
+.truck_icon{
+    width: 2rem !important;
+    margin-right: 1.4vw !important;
+}
+
+.menu-left, .menu-right {
+    display: flex;
+    flex-direction: column;
+    font-family: "Joan", Arial, Helvetica, sans-serif;
+    justify-content: center;
+    flex: 1;
+}
+
+.menu-left {
+    padding: 0 3rem; /* Add padding to the right side of the left menu */
+}
+
+.menu-right {
+    padding-left: 2rem; /* Add padding to the left side of the right menu */
+}
+
+#menu::before {
+    content: "";
+    height: 30vh; /* Matches the height when the menu expands */
+    width: 2px;
+    background-color: white; /* Line color */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    top: 50%;
+}
+
+#menu.expanded {
+    height: 80vh;
+}
+
+/* Main Sections */
 
 .topsec {
     width: 100%;
@@ -105,7 +174,7 @@ header ul{
 }
 
 .scndsec{
-    padding: 200px 0 100px 0;
+    padding: 200px 0 0 0;
 }
 
 #midgrid{
@@ -130,6 +199,26 @@ header ul{
 .grid_mid{
     margin-bottom: 20px;
     width: 40%;
+}
+
+#wheel {
+    width: 10vw; 
+    position: relative;
+    left: 78vw; 
+    bottom: 80vh; 
+}
+
+.autorot{
+    animation: autorotanimation;
+    animation-timeline: view();
+}
+@keyframes autorotanimation{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .shopnowbutt{
@@ -475,11 +564,36 @@ footer {
         margin: 10vw 0;
     }
 
+    #wheel {
+        width: 10vw; 
+        position: absolute;
+        left: 80vw; 
+        top: 160vh; 
+    }
+
 }
 
 /* Mobile View */
 
 @media (max-width: 768px) {
+
+    #menu {
+        flex-direction: column;
+    }
+
+    #menu a {
+        font-size: 1.25rem;
+        padding: 15px;
+    }
+
+    .menu-right, .menu-left {
+        margin: 0;
+    }
+
+    #menu::before {
+        display: none;
+    }
+
     .scndsec {
         padding: 100px 0 12px 0; /* Adjust padding for mobile */
     }
@@ -506,6 +620,12 @@ footer {
         position: relative;
         left: 0;
         transform: translate(0, 0);
+    }
+
+    #wheel {
+        width: 15vw; /* Increase width for smaller screens */
+        left: 75vw; /* Adjust positioning */
+        top: 120vh; /* Adjust vertical position */
     }
 
     .new_earring_head{
@@ -573,5 +693,13 @@ footer {
     .new_earring_head2 {
         margin-top: -20vw;
         font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #wheel {
+        width: 20vw; /* Further increase width for mobile screens */
+        left: 70vw; /* Adjust positioning */
+        top: 110vh; /* Adjust vertical position */
     }
 }

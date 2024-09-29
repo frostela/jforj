@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joan&display=swap" rel="stylesheet">
     <title>JFJ Website</title>
+    <script src="script.js"></script>
 </head>
+
 <body>
     <header>
         <nav>
@@ -14,6 +20,22 @@
             <img id="manubar" src="contents/manubar.png" alt="manubar">
         </nav>
         <ul></ul>
+        <div id="menu">
+            <div class="menu-left">
+                <a href="#"><img src="contents/home_icon.png" alt="Home icon"> Home</a>
+                <a href="#"><img src="contents/cart_icon.png" alt="Contact Icon"> Shop by Categories</a>
+                <a href="#"><img src="contents/offer_icon.png" alt="Offer Icon"> Offers/Deals</a>
+                <a href="#"><img src="contents/info_icon.png" alt="Info Icon"> About Us</a>
+                <a href="#"><img src="contents/contact_icon.png" alt="Phone Image"> Contact Us</a>
+            </div>
+            <div class="menu-right">
+                <a href="#"><img src="contents/account_icon.png" alt="Account Icon" class="account_icon"> Account/Login</a>
+                <a href="#"><img src="contents/cart_icon.png" alt="Cart Icon" class="cart_icon"> Cart</a>
+                <a href="#"><img src="contents/heart_icon.png" alt="Heart Icon"> Wishlist</a>
+                <a href="#"><img src="contents/location_icon.png" alt="Location Icon" class="location_icon"> Track Order</a>
+                <a href="#"><img src="contents/truck_icon.png" alt="Truck Icon" class="truck_icon"> Shipping & Returns</a>
+            </div>
+        </div>
     </header>
     <main>
         <section class="topsec">
@@ -28,16 +50,20 @@
                 <img class="grid_mid" src="contents/gid_mid.png" alt="Earring and Bracelet Pic">
                 <img class="grid_right" src="contents/grid_right.png" alt="Bracelet Pic">
             </div>
+            
             <div class="shopnowbutt">
                 <a href="">Shop Now</a>
                 <img src="contents/arrow.png" alt="arrow">
             </div>
+
+            <img src="contents/circle.png" alt="wheel" class="autorot" id="wheel">
+
         </section>
 
         <section class="videosec">
             <video autoplay loop muted class="mount_video">
-                <source src="contents/Mount.mp4" fetchpriority="high" type="video/mp4" media="(min-width: 768px)">
-                <source src="contents/Mount.mp4" type="video/mp4" media="(max-width: 767px)">
+                <source src="contents/video_temp.mp4" fetchpriority="high" type="video/mp4" media="(min-width: 768px)">
+                <source src="contents/video_temp.mp4" type="video/mp4" media="(max-width: 767px)">
         </section>
 
         <section class="scrolling-text-section">
@@ -46,13 +72,13 @@
                     <span>Vare Handmade Elegance &nbsp;&nbsp;</span>
                     <img src="contents/scrollgif_img.png" alt="Your Image" class="scrolling-img">
                     <span>&nbsp;&nbsp;Experience Unique Creation &nbsp;&nbsp;</span>
-                   
+
                 </div>
                 <div class="scrolling-text">
                     <span>Vare Handmade Elegance &nbsp;&nbsp;</span>
                     <img src="contents/scrollgif_img.png" alt="Your Image" class="scrolling-img">
                     <span>&nbsp;&nbsp;Experience Unique Creation &nbsp;&nbsp;</span>
-                   
+
                 </div>
             </div>
         </section>
@@ -84,7 +110,7 @@
                 <img src="contents/arrow.png" alt="arrow">
             </div>
         </section>
-                
+
     </main>
 
     <footer>
@@ -125,6 +151,7 @@
             <p>© 2024 Jewels For Jewels. All rights reserved</p>
         </div>
     </footer>
-    
+
 </body>
+
 </html>
