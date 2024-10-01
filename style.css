@@ -106,11 +106,11 @@ header ul{
 }
 
 .menu-left {
-    padding: 0 3rem; /* Add padding to the right side of the left menu */
+    padding-left: 3rem; /* Add padding to the right side of the left menu */
 }
 
 .menu-right {
-    padding-left: 2rem; /* Add padding to the left side of the right menu */
+    padding-left: 3rem; /* Add padding to the left side of the right menu */
 }
 
 #menu::before {
@@ -266,67 +266,58 @@ header ul{
 
 /* Main section */
 .scrolling-text-section {
+    overflow: hidden; /* Hide overflow to maintain a clean look */
+    width: 100%; /* Full width for the container */
     position: relative;
-    overflow: hidden;
-    height: 60px; /* Adjust based on your design */
-    background-color: #f5e9e1; /* Background color */
+    border-top:3px solid black  ;
+    border-bottom:3px solid black  ;
+    height: 60px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-top: #152945 3px solid;
-    border-bottom: #152945 3px solid;
-    margin-bottom: 3vw;
+    align-items: center;
 }
 
-/* Scrolling container */
-.scrolling-text-container {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%; /* Ensure it spans the full width of the container */
+
+.scrolling-text {
     display: flex;
     align-items: center;
-    position: relative;
-}
-
-/* Scrolling text */
-.scrolling-text {
-    display: flex; /* Change to flexbox */
-    align-items: center; /* Center vertically */
-    white-space: nowrap; /* Ensure the text stays in one line */
-    animation: scroll 20s linear infinite; /* Adjust the timing here if necessary */
-    padding-left: 100%;
-}
-
-.scroll_2end_text{
-    margin-left:80% ;
-}
-
-/* Scrolling text styling */
-.scrolling-text span {
-    font-size: 24px; /* Adjust size */
-    font-weight: bold;
-    color: #5d2837; /* Match with your design */
-    font-family: Black_emerald, Arial, Helvetica, sans-serif;
     white-space: nowrap; /* Prevent text from wrapping */
-    line-height: 60px;
+    position: absolute; /* Position absolutely for control */
+    animation: scroll 30s linear infinite; /* Continuous scrolling */
 }
 
-/* Image inside scrolling text */
+/* Individual scrolling items */
+.scrolling-con {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /* Prevent wrapping */
+    width: 100%;
+}
+
+.scrolling-text span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #5d2837;
+    font-family: Black_emerald, Arial, Helvetica, sans-serif;
+    margin: 0 10px;
+}
+
 .scrolling-img {
-    height: 40px; /* Adjust height based on your design */
-    margin: 0 10px; /* Add margin for spacing */
-    vertical-align: middle; /* Ensures the image aligns with the text */
+    height: 40px;
+    vertical-align: middle;
 }
 
-/* Scrolling animation */
+/* Keyframes for right to left scrolling with a pause */
 @keyframes scroll {
     0% {
-        transform: translateX(100%); /* Start off-screen to the right */
+        transform: translateX(100%); /* Start just off-screen to the right */
     }
     100% {
-        transform: translateX(-100%); /* End off-screen to the left */
+        transform: translateX(-100%); /* Move to just off-screen to the left */
     }
 }
+
+
 
 /* New Earrings flex section */
 
@@ -579,6 +570,7 @@ footer {
 
     #menu {
         flex-direction: column;
+        /* padding: 50px 0; */
     }
 
     #menu a {
@@ -587,7 +579,21 @@ footer {
     }
 
     .menu-right, .menu-left {
-        margin: 0;
+        padding: 0;
+        justify-content: space-around;
+        width: 70vw;
+    }
+
+    .menu-left {
+        padding-top: 19vw;
+    }
+
+    .menu-right {
+        padding-bottom: 19vw;
+    }
+
+    #menu.expanded {
+        height: 86vh !important;
     }
 
     #menu::before {
@@ -623,9 +629,9 @@ footer {
     }
 
     #wheel {
-        width: 15vw; /* Increase width for smaller screens */
-        left: 75vw; /* Adjust positioning */
-        top: 120vh; /* Adjust vertical position */
+        width: 15vw; 
+        left: 75vw; 
+        bottom: 120vh; 
     }
 
     .new_earring_head{
