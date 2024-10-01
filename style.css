@@ -106,7 +106,7 @@ header ul{
 }
 
 .menu-left {
-    padding: 0 3rem; /* Add padding to the right side of the left menu */
+    padding-left: 3rem; /* Add padding to the right side of the left menu */
 }
 
 .menu-right {
