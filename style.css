@@ -555,12 +555,11 @@ footer {
         margin: 10vw 0;
     }
 
-    #wheel {
+    /* #wheel {
         width: 10vw; 
-        position: absolute;
         left: 80vw; 
         top: 160vh; 
-    }
+    } */
 
 }
 
@@ -630,8 +629,7 @@ footer {
 
     #wheel {
         width: 15vw; 
-        left: 75vw; 
-        bottom: 120vh; 
+        z-index: 1;
     }
 
     .new_earring_head{
@@ -704,8 +702,8 @@ footer {
 
 @media (max-width: 480px) {
     #wheel {
-        width: 20vw; /* Further increase width for mobile screens */
-        left: 70vw; /* Adjust positioning */
-        top: 110vh; /* Adjust vertical position */
+        width: 20vw; 
+        left: 70vw; 
+        bottom: 27vh;
     }
 }
