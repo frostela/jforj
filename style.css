@@ -17,6 +17,10 @@ body{
     background-color: #F1E7E0;
 }
 
+[data-scroll-container] {
+    overflow: hidden;
+}
+
 header{
     padding: 0 3vw;
 }
@@ -403,8 +407,6 @@ header ul{
     color: #F1E7E0;
 }
 
-
-
 /* Footer */
 
 footer {
@@ -413,6 +415,7 @@ footer {
     padding: 2rem 3vw;
     font-family: Arial, sans-serif;
     margin-top: 18vw;
+    transform: translateZ(0); /* Ensures visibility within Locomotive Scroll */
 }
 
 .footer-container {
@@ -420,6 +423,7 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     padding: 2rem 0;
+    position: relative;
 }
 
 .footer-left {
