@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Locomotive Scroll
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+  });
+
+  setTimeout(() => {
+    scroll.update();
+  }, 100);
+  
+
   const manubar = document.getElementById("manubar");
   if (manubar) {
     manubar.addEventListener("click", function () {
@@ -8,7 +19,4 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Manubar element not found");
   }
-
-  
-  
 });
