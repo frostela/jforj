@@ -70,62 +70,122 @@ header ul{
     background-color: #580E20;
     overflow: hidden;
     transition: height 0.3s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: relative;
-}
-
-#menu a {
-    color: white;
-    font-size: 1.9rem;
-    text-decoration: none;
-    display: flex; /* Change to flexbox to align image and text */
-    align-items: center; /* Vertically center the image and text */
-    padding: 7px;
-    margin: 0 10px;
-}
-
-#menu a img {
-    margin-right: 1.8vw;
-    width: 1.7rem;
-    vertical-align: middle; /* Ensures image remains vertically aligned */
-}
-
-.truck_icon{
-    width: 2rem !important;
-    margin-right: 1.4vw !important;
-}
-
-.menu-left, .menu-right {
-    display: flex;
-    flex-direction: column;
-    font-family: "Joan", Arial, Helvetica, sans-serif;
-    justify-content: center;
-    flex: 1;
-}
-
-.menu-left {
-    padding-left: 3rem; /* Add padding to the right side of the left menu */
-}
-
-.menu-right {
-    padding-left: 3rem; /* Add padding to the left side of the right menu */
-}
-
-#menu::before {
-    content: "";
-    height: 30vh; /* Matches the height when the menu expands */
-    width: 2px;
-    background-color: white; /* Line color */
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    top: 50%;
+    box-sizing: border-box;
+    padding: 0 13%;
 }
 
 #menu.expanded {
     height: 80vh;
+}
+
+#menu a {
+    color: white;
+    font-size:1.6em;
+    text-decoration: none;
+    display: flex; 
+    align-items: center; 
+    margin: 10px 0;
+    font-weight: 100;
+    font-family: "Joan", serif;
+}
+
+#menu a img {
+    margin-right: 1vw;
+    width: 1.4rem;
+    vertical-align: middle; /* Ensures image remains vertically aligned */
+}
+
+.hello_sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    align-content: center;
+    flex-wrap: wrap;
+    border-bottom: #F1E7E0 solid 1px;
+}
+
+.hello_sec h4{
+    color: white;
+    font-family: "Kalnia", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: larger;
+}
+
+.menu_sec{
+    margin: 30px 0;
+}
+
+.menu_bot{
+    margin-top: 55px;
+}
+
+.about-con{
+    display: flex;
+    width: 100%;
+    color: white;
+    border-bottom: #F1E7E0 solid 1px;;
+}
+
+.about-con h4{
+    color: white;
+    font-family: "Kalnia", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: medium;
+}
+
+#con{
+    left: 60%;
+    position: absolute;
+}
+
+.about-con_content{
+    margin: 20px 0;
+    display: flex;
+
+}
+
+.about_content{
+    width: 50%;
+    line-height: 100%;
+    color: white;
+    font-family: "Kalnia", serif;
+    font-weight: 200;
+    font-size: 0.7em;
+    
+}
+
+.about_content h3{
+    text-align: end;
+    margin-right: 30px;
+    font-weight: 300;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.con_content{
+    left: 60%;
+    position: absolute;
+    line-height: 100%;
+    color: white;
+
+}
+
+.con_content h3{
+    font-family: "Kalnia", serif;
+    font-weight: 300;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.social-ico img{
+    width: 1rem;
+    margin-right: 5px;
+    position: relative;
 }
 
 /* Main Sections */
@@ -500,6 +560,11 @@ footer {
 /* Tab View */
 
 @media (max-width: 1270px) {
+
+    #menu.expanded {
+        height: 50vh;
+    }
+    
     .scndsec {
         padding: 100px 0 0 0; /* Adjust padding for tablet */
     }
@@ -574,29 +639,16 @@ footer {
 
     #menu a {
         font-size: 1.25rem;
-        padding: 15px;
-    }
-
-    .menu-right, .menu-left {
-        padding: 0;
-        justify-content: space-around;
-        width: 70vw;
-    }
-
-    .menu-left {
-        padding-top: 19vw;
-    }
-
-    .menu-right {
-        padding-bottom: 19vw;
+        padding: 6px;
     }
 
     #menu.expanded {
-        height: 86vh !important;
+        height: 50vh ;
     }
 
-    #menu::before {
-        display: none;
+    .about_content h3{
+        text-align:start;
+        margin-top: 20px;
     }
 
     .scndsec {
@@ -705,5 +757,33 @@ footer {
         width: 20vw; 
         left: 70vw; 
         bottom: 27vh;
+    }
+
+    #menu {
+        flex-direction: column;
+        /* padding: 50px 0; */
+    }
+
+    #menu a {
+        font-size: 1.25rem;
+        padding: 6px;
+    }
+
+    #menu.expanded {
+        height: 70vh ;
+    }
+
+    #con{
+        left: 50%;
+    }
+    
+    .con_content{
+        left: 50%;
+    }
+
+    .about_content{
+        width: 50%;
+        padding-right: 10px;
+        
     }
 }
