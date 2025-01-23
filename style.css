@@ -120,7 +120,10 @@ header ul{
 }
 
 .menu_bot{
+    width: 74%;
     margin-top: 55px;
+    position: absolute;
+    top: 60%;
 }
 
 .about-con{
@@ -562,7 +565,7 @@ footer {
 @media (max-width: 1270px) {
 
     #menu.expanded {
-        height: 50vh;
+        /* height: 50vh; */
     }
     
     .scndsec {
@@ -643,7 +646,7 @@ footer {
     }
 
     #menu.expanded {
-        height: 50vh ;
+        /* height: 50vh ; */
     }
 
     .about_content h3{
@@ -770,7 +773,7 @@ footer {
     }
 
     #menu.expanded {
-        height: 70vh ;
+        /* height: 70vh ; */
     }
 
     #con{
